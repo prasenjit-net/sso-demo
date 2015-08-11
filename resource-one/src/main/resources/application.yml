@@ -1,0 +1,16 @@
+server:
+  port: 8082
+spring:
+  oauth2:
+#    client:
+#      clientId: client1
+#      clientSecret: secret1
+#      accessTokenUri: http://localhost:8081/oauth/token
+#      userAuthorizationUri: http://localhost:8081/oauth/authorize
+#      clientAuthenticationScheme: form
+    resource:
+      jwt:
+        keyUri: http://localhost:8081/oauth/token_key
+#      tokenInfoUri: http://localhost:8081/oauth/check_token
+#      userInfoUri: http://localhost:8081/user
+#      preferTokenInfo: true

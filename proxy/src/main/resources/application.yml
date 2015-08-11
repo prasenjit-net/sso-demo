@@ -9,9 +9,9 @@ spring:
     resource:
       jwt:
         keyUri: http://localhost:8081/oauth/token_key
-      tokenInfoUri: http://localhost:8081/oauth/check_token
-      userInfoUri: http://localhost:8081/user
-      preferTokenInfo: true
+#      tokenInfoUri: http://localhost:8081/oauth/check_token
+#      userInfoUri: http://localhost:8081/user
+#      preferTokenInfo: true
 #spring:
 #  oauth2:
 #    client:
@@ -23,3 +23,10 @@ spring:
 #    resource:
 #      userInfoUri: https://api.github.com/user
 #      preferTokenInfo: false
+zuul:
+  routes:
+    resource1:
+      path: /resource1
+      url: http://localhost:8082
+      stripPrefix: true
+      retryable: true
