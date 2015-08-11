@@ -14,3 +14,6 @@ spring:
 #      tokenInfoUri: http://localhost:8081/oauth/check_token
 #      userInfoUri: http://localhost:8081/user
 #      preferTokenInfo: true
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true

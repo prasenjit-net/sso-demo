@@ -31,7 +31,7 @@ public class OAuthConfigurer extends AuthorizationServerConfigurerAdapter {
     public void configure(AuthorizationServerSecurityConfigurer security)
             throws Exception {
         security.tokenKeyAccess("permitAll()").checkTokenAccess(
-                "authenticated()").allowFormAuthenticationForClients();
+                "isAuthenticated()").allowFormAuthenticationForClients();
     }
 
     @Override

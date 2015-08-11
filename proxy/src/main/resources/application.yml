@@ -26,7 +26,7 @@ spring:
 zuul:
   routes:
     resource1:
-      path: /resource1
+      path: /resource1/**
       url: http://localhost:8082
       stripPrefix: true
       retryable: true
