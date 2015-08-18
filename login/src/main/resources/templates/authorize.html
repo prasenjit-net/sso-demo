@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Authorize</title>
+</head>
+<body>
+<div class="container">
+    <h2>Please Confirm</h2>
+
+    <p>
+        Do you authorize "<span th:text="${authorizationRequest.clientId}"/> at "<span
+            th:text="${authorizationRequest.redirectUri}"/>" to
+        access your
+        protected resources
+        with scope <span th:text='${authorizationRequest.scope?:join(", ")}'/>.
+    </p>
+
+    <form action="#" th:action="@{/oauth/authorize}" method="post" class="form-horizontal">
+        <input name="user_oauth_approval" value="true" type="hidden"/>
+        <button class="btn btn-primary" type="submit">Approve</button>
+    </form>
+    <form action="#" th:action="@{/oauth/authorize}" method="post" class="form-horizontal">
+        <input name="user_oauth_approval" value="false" type="hidden"/>
+        <button class="btn btn-primary" type="submit">Deny</button>
+    </form>
+</div>
+</body>
+</html>
