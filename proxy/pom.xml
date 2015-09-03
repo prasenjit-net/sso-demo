@@ -20,7 +20,7 @@
     <parent>
         <groupId>net.prasenjit.security</groupId>
         <artifactId>sso-demo</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>proxy</artifactId>
     <packaging>war</packaging>
